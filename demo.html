@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>Trang chủ</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA_Compatible" content="IE=edge">
+		<!-- Latest compiled and minified CSS & JS -->
+		<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" media="screen" href="css/myweb.css">
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="" id="main-nav" style="top: 0px;">
+<div class="container">
+<div class="main-menu">
+<ul class="menu" id="menu-main">
+<li class="green"><a class="home" href="/">Home</a></li>
+<li class="red"><a href="http://www.sangtaolaptrinhp.blogspot.com/search?q=l%E1%BA%ADp+trinh">L?p trình</a>
+<ul>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Nh%E1%BA%ADp%20m%C3%B4n%20l%E1%BA%ADp%20tr%C3%ACnh%20C">L?p trình C/C++</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/C%23">L?p trình C#</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Java">L?p trình Java</a></li>
+</ul>
+</li>
+<li class="yellow"><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Thu%E1%BA%ADt%20to%C3%A1n">Thu?t toán </a>
+</li>
+<li><a href="#">L?p trình di d?ng</a>
+<ul>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Android">L?p trình Android</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/iOS">L?p trình iOS</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Windows%20Phone">L?p trình Windows Phone</a></li>
+</ul>
+</li>
+<li><a href="#">L?p trình Game</a>
+<ul>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Cocos2d-x">L?p trình Game Cocos2d-x</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/">L?p trình Game Unity</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/">L?p trình Game LibGDX</a></li>
+</ul>
+</li>
+<li class="orange"><a href="#">Công c?</a>
+<ul>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/C%C3%B4ng%20C%E1%BB%A5%20L%E1%BA%ADp%20Tr%C3%ACnh">Công c? l?p trình</a></li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/Ph%E1%BA%A7n%20m%E1%BB%81m">Ph?n m?m</a></li>
+</ul>
+</li>
+<li><a href="http://www.sangtaolaptrinhp.blogspot.com/search/label/SEO">SEO</a></li>
+<li id="ranpost"><a href="#random" rel="159"></a></li>
+<script type="text/javascript">
+/*<![CDATA[*/
+function showLucky(root){ var feed = root.feed; var entries = feed.entry || []; var entry = feed.entry[0]; for (var j = 0; j < entry.link.length; ++j){if (entry.link[j].rel == 'alternate'){window.location = entry.link[j].href;}}} function fetchLuck(luck){ script = document.createElement('script'); script.src = '/feeds/posts/summary?start-index='+luck+'&max-results=1&alt=json-in-script&callback=showLucky'; script.type = 'text/javascript'; document.getElementsByTagName('head')[0].appendChild(script); } function feelingLucky(root){ var feed = root.feed; var total = parseInt(feed.openSearch$totalResults.$t,10); var luckyNumber = Math.floor(Math.random()*total);luckyNumber++; a = document.createElement('a'); a.href = '#random'; a.rel = luckyNumber; a.onclick = function(){fetchLuck(this.rel);}; document.getElementById('ranpost').appendChild(a); } </script><script src="/feeds/posts/summary?max-results=0&amp;alt=json-in-script&amp;callback=feelingLucky">
+/*]]>*/
+</script>
+</ul>
+</div>
+</div>
+</nav>
+	</body>
+</html>
