@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Tìm kiếm</title>
-
-	<meta http-equiv="X-UA_Compatible" content="IE=edge">
-		<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-	<link rel="stylesheet" media="screen" href="css/giaodien.css">
-	<script src="js/jquery-3.1.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Tìm kiếm</title>
+<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" media="screen" href="css/giaodien.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
+<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 			<nav class="navbar navbar-default">
   				<div class="container-fluid">
     
     				<div class="navbar-header">
-      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -57,23 +53,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Thông báo <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="ThongBao-SV.jsp">Thông báo <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Thông tin cá nhân <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Xem thông tin</a></li>
-            <li><a href="#">Đổi thông tin</a></li>
-            <li><a href="#">Đổi mật khẩu</a></li>
+            <li><a href="#openinfor">Xem thông tin</a></li>
+            <li><a href="DoiThongTin-SV.jsp">Đổi thông tin</a></li>
+            <li><a href="#openDoiMK">Đổi mật khẩu</a></li>
           </ul>
         </li>
-        <li><a href="">Tìm kiếm</a></li>
-        <li><a href="">Danh sách đề tài</a></li>
-        <li><a href="">Tài liệu tham khảo</a></li>
+        <li><a href="TimKiem-SV.jsp">Tìm kiếm</a></li>
+        <li><a href="DSDeTai-SV.jsp">Danh sách đề tài</a></li>
+        <li><a href="TaiLieuThamKhao-SV.jsp">Tài liệu tham khảo</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Hi!</a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
@@ -85,17 +81,18 @@
 				<div class="col-xs-3"><h3 align="center">Tìm kiếm</h3>
   
 		<div><label>Tìm kiếm theo? <p></p><select class="form-control"></label>
-					<option>Mã đề tài</option>
+					<option>Mã đề tài </option>
 					<option>Mã giáo viên</option>
 					<option>Mã khoa</option>
 					</select>
 			</div>
 			<p></p>
-		<label>Nhập mã<p></p> <input type="text"></label>
-		<a href="#"><img src="pic/Find01-128.png" alt="Tìm" class="img-circle" width="50"></a>
-		
-		<h4>Nội dung tóm tắt &nbsp;	&nbsp; <a href="">Xem hết</a></h4> 
-		<select multiple class="form-control">
+		<div class="input-group">
+      <input type="text" class="form-control" placeholder="Nhập mã">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Tìm</button>
+      </span>
+    </div>
 			<option></option>
 			
 			
@@ -149,5 +146,65 @@
 </div>
 </div>
 </div>
+
+<div id="openinfor" class="modalDialog">
+   			 <div>
+        		<a href="#close" title="Close" class="close">X</a>
+        			<form>
+        				 	<table id="table1" class="table table-condensed">
+        				 	<tr>
+        				 		<th id="th1">Ảnh</th>
+        				 		<th id="th2">Thông tin</th>
+        				 	</tr>
+        				 	<tr>
+        				 		<td>
+        				 			
+        				 		</td >
+        				 		<td id="td1">
+        				 			MSSV
+									<p></p>
+									Họ và tên
+									<p></p>
+									Giới tính
+									<p></p>
+									Ngày sinh
+									<p></p>
+									Khoa
+									<p></p>
+									Chuyên ngành
+									<p></p>
+									Email
+									<p></p>
+									Địa chỉ
+
+        				 		</td>
+        				 	</tr>
+
+							</table>
+					</form>
+
+    		</div>
+		</div>
+
+				
+
+<div id="openDoiMK" class="modalDialog">
+   			 <div>
+        		<a href="#close" title="Close" class="close">X</a>
+        			<form>
+        				 	
+						  <h2 id="dn">Đổi mật khẩu</h2>
+				 		<input id="input1" placeholder="Tên truy cập" type="text" required="">
+						 <input id="input2" placeholder="Mật khẩu cũ" type="password" required="">
+						 <input id="input2" placeholder="Mật khẩu mới" type="password" required="">
+						 <input id="input2" placeholder="Nhập lại" type="password" required="">
+						 
+						  <button id="btn1">Lưu</button>
+						   <button id="btn2">Hủy</button>
+					</form>
+
+    		</div>
+		</div>
+
 </body>
 </html>

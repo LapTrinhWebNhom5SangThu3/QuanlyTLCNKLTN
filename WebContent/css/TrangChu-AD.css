@@ -109,6 +109,7 @@ li>a{
         -moz-transition: opacity 400ms ease-in;
         transition: opacity 400ms ease-in;
         pointer-events: none;
+        text-align: center;
     }
  
 .modalDialog:target {
@@ -253,90 +254,38 @@ h2{
   transform: translateY(-3px);
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
-#btLuu{
-  margin-top: 14px;
-  margin-left: 15px;
-   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-  width: 70px;
-  border: none;
-  background: #1abc9c;
-  cursor: pointer;
-  border-radius: 3px;
-    color: white;
-
-}
-
-#btHuy{
-  margin-top: 14px;
-  margin-left: -85px;
-   padding: 10px;
-  width: 70px;
-  border: none;
-  background: #1abc9c;
-  cursor: pointer;
-  border-radius: 3px;
-    color: white;
-}
-#btLuu:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
-}
-#btHuy:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
-}
-input{
-   border: none;
-   color: #08088A;
-
-}
-label{
-  color: #0A2A0A;
-}
-th{
-  font-size: 16px;
-  color: #0A2A0A;
-}
 
 
-#btLuu1{
-  margin-top: 14px;
-  margin-left: 15px;
-   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-  width: 70px;
-  border: none;
-  background: #1abc9c;
-  cursor: pointer;
-  border-radius: 3px;
-    color: white;
-
+table{
+  overflow: hidden;
+  background-color: #93b2d8;
 }
 
-#btHuy1{
-  margin-top: 14px;
-  margin-left: 15px;
-   padding: 10px;
-  width: 70px;
-  border: none;
-  background: #1abc9c;
-  cursor: pointer;
-  border-radius: 3px;
-    color: white;
-}
-#btLuu1:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
-}
-#btHuy1:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+tr:hover {
+  background-color: #ffa;
 }
 
-
-#ipfile{
-     width           : 5px;
-    height          : 2px;
+td, th {
+  position: relative;
 }
-
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+.row{
+  background-color: none;
+}
+.input-group{
+	width: 100%;
+}
+.form-control{
+	width: 100%;
+	
+}

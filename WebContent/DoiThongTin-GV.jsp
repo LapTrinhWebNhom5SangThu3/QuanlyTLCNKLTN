@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Thông báo!</title>
+	<title>Đổi thông tin</title>
 
 	<meta http-equiv="X-UA_Compatible" content="IE=edge">
 		<!-- Latest compiled and minified CSS & JS -->
@@ -21,7 +22,7 @@
   				<div class="container-fluid">
     
     				<div class="navbar-header">
-      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -57,11 +58,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Thông báo <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="ThongBao-GV.html">Thông báo <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Giáo Viên</a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -77,12 +78,12 @@
 	<li class="item-144 nav-item pure-menu-selected"><a href=""><img src="pic/Security.png" alt="">Thông tin cá nhân</a></li>
 		<ul>
 			<li><a href="#openinfor">Xem thông tin</a></li>
-			<li><a href="DoiTT-GV.html">Đổi thông tin</a></li>
+			<li><a href="">Đổi thông tin</a></li>
 			<li><a href="#openDoiMK">Đổi mật khẩu</a></li>
 
 		</ul>
-	<li class="item-145 nav-item"><a href=""><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
-	<li class="item-146 nav-item"><a href="#openUpload"><img src="pic/icon_arrowup.png" alt=""> Đăng luận văn</a></li>
+	<li class="item-145 nav-item"><a href="TimKiem-GV.jsp"><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
+	<li class="item-146 nav-item"><a href="DangLuanVan-GV.jsp"><img src="pic/icon_arrowup.png" alt=""> Đăng luận văn</a></li>
 
 </div>
 				</div>
@@ -91,19 +92,24 @@
 				</div>
 				<div class="col-md-8">
 					<table>
-					<tr><th>Thông báo! <img src="pic/loa.png" alt="" width="10%"></th></tr>
+					<tr><th><img src="pic/red-edit-icon-glossy-29.png" alt="" width="8%"> Đổi Thông Tin </th></tr>
 					<tr>
-						<td>Thông báo 1: </td>
-						<td><u><i><a href="">Chi tiết</a></i></u></td>
+						<td>
+							&nbsp;
+						</td>
 					</tr>
 					<tr>
-						<td>Thông báo 2: </td>
-						<td><u><i><a href="">Chi tiết</a></i></u></td>
+						<td> <label>MSGV <br><input id="ip1" type="text" name=""></label></td>
+						<td><label>Bộ môn <br> <input type="text" name=""></label></td>
 					</tr>
 					<tr>
-						<td>Thông báo 3: </td>
-						<td><u><i><a href="">Chi tiết</a></i></u></td>
-					</tr>
+						<td> <label>Họ tên <br> <input type="text" name=""></label></td>
+						<td> <label>Email <br><input type="text" name=""></label></td>
+						
+					<tr>
+						<td> <label>Khoa <br><input type="text" name=""></label></td>
+						<td><a href=""><button id="btLuu">Lưu</button></a></td>
+						<td><a href=""><button id="btHuy">Hủy</button></a></td>
 						
 					</table>
 				</div>
@@ -170,65 +176,6 @@
     		</div>
 		</div>
 
-<div id="openUpload" class="modalDialog">
-   			 <div>
-        		<a href="#close" title="Close" class="close">X</a>
-        			<form>
-        				 	
-						  <h2 id="dlv">Đăng luận văn</h2>
-				 		<table>
-				 			<tr>
-				 				<td>
-				 					<label >Tên luân văn </label><br> <input id="i1" type="text">
-				 				</td>
-				 				<td>
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-				 				</td>
-
-				 				<td>
-				 					 <label >Khoa </label><br><input id="i2" type="text">
-				 				</td>
-				 			</tr>
-				 			<tr>
-				 				<td>
-				 					
-				 					 <label >Mã đề tài </label><br><input id="i3" type="text">
-				 				</td>
-				 				<td>
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 				</td>
-				 				<td>
-				 					<label >Tải file  </label><br> <label class="btn btn-default btn-file">
-    								Browse <input id="i4" type="file" style="display: none;"></label>
-				 				</td>
-				 			</tr>
-				 			<tr>
-				 				<td>
-				 					 <label >Tên GV  </label><br>	<input id="i5" type="text">
-				 				</td>
-				 				<td>
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-				 				</td>
-				 				<td>
-				 					<label >Nội dung </label><br><input id="i6" type="text">
-				 				</td>
-				 			</tr>
-				 		</table>
-						  <button id="btn1">Lưu</button>
-						   <button id="btn2">Hủy</button>
-					</form>
-
-    		</div>
-		</div>
-	
 
 </body>
 </html>

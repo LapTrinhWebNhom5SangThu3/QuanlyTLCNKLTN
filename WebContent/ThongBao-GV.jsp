@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -21,7 +22,7 @@
   				<div class="container-fluid">
     
     				<div class="navbar-header">
-      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -60,8 +61,8 @@
         <li class="active"><a href="#">Thông báo <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Sinh Viên</a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href="">Giáo viên</a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -74,17 +75,15 @@
 				<div class="col-md-3">
 				<div class="containter">
 	<ul class="nav menu retailermenu">
-	<li class="item-144 nav-item pure-menu-selected"><a href="#"><img src="pic/Security.png" alt="">Thông tin cá nhân</a></li>
+	<li class="item-144 nav-item pure-menu-selected"><a href=""><img src="pic/Security.png" alt="">Thông tin cá nhân</a></li>
 		<ul>
 			<li><a href="#openinfor">Xem thông tin</a></li>
-			<li><a href="DoiTT-SV.html">Đổi thông tin</a></li>
+			<li><a href="DoiThongTin-GV.jsp">Đổi thông tin</a></li>
 			<li><a href="#openDoiMK">Đổi mật khẩu</a></li>
 
 		</ul>
-	<li class="item-145 nav-item"><a href=""><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
-	<li class="item-146 nav-item"><a href=""><img src="pic/download-list-icon.png" alt="">Danh sách đề tài</a></li>
-	<li class="item-147 nav-item"><a href=""><img src="pic/icon=30x.png" alt="">Tài liệu tham khảo</a></li>
-	</ul>
+	<li class="item-145 nav-item"><a href="TimKiem-GV.jsp"><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
+	<li class="item-146 nav-item"><a href="DangLuanVan-GV.jsp"><img src="pic/icon_arrowup.png" alt=""> Đăng luận văn</a></li>
 
 </div>
 				</div>
@@ -133,21 +132,15 @@
         				 			
         				 		</td >
         				 		<td id="td1">
-        				 			MSSV
+        				 			MSGV: 
 									<p></p>
-									Họ và tên
+									Họ và tên: 
 									<p></p>
-									Giới tính
+									Khoa:
 									<p></p>
-									Ngày sinh
+									Bộ Môn:
 									<p></p>
-									Khoa
-									<p></p>
-									Chuyên ngành
-									<p></p>
-									Email
-									<p></p>
-									Địa chỉ
+									Email:
 
         				 		</td>
         				 	</tr>
@@ -178,6 +171,65 @@
     		</div>
 		</div>
 
+<div id="openUpload" class="modalDialog">
+   			 <div>
+        		<a href="#close" title="Close" class="close">X</a>
+        			<form>
+        				 	
+						  <h2 id="dlv">Đăng luận văn</h2>
+				 		<table>
+				 			<tr>
+				 				<td>
+				 					<label >Tên luân văn </label><br> <input id="i1" type="text">
+				 				</td>
+				 				<td>
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				 				</td>
+
+				 				<td>
+				 					 <label >Khoa </label><br><input id="i2" type="text">
+				 				</td>
+				 			</tr>
+				 			<tr>
+				 				<td>
+				 					
+				 					 <label >Mã đề tài </label><br><input id="i3" type="text">
+				 				</td>
+				 				<td>
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 				</td>
+				 				<td>
+				 					<label >Tải file  </label><br> <label class="btn btn-default btn-file">
+    								Browse <input id="i4" type="file" style="display: none;"></label>
+				 				</td>
+				 			</tr>
+				 			<tr>
+				 				<td>
+				 					 <label >Tên GV  </label><br>	<input id="i5" type="text">
+				 				</td>
+				 				<td>
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				 				</td>
+				 				<td>
+				 					<label >Nội dung </label><br><input id="i6" type="text">
+				 				</td>
+				 			</tr>
+				 		</table>
+						  <button id="btn1">Lưu</button>
+						   <button id="btn2">Hủy</button>
+					</form>
+
+    		</div>
+		</div>
+	
 
 </body>
 </html>

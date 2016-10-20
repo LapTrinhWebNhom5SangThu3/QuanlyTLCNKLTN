@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Trang chủ admin</title>
+	<title>Lọc luận văn</title>
 
 	<meta http-equiv="X-UA_Compatible" content="IE=edge">
 		<!-- Latest compiled and minified CSS & JS -->
@@ -60,8 +61,8 @@
         <li class="active"><a href="#">Trang Admin <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Hi!</a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -74,7 +75,7 @@
 				<div class="col-md-3">
 				<div class="containter">
 	<ul class="nav menu retailermenu">
-	<li class="item-143 nav-item"><a href=""><img src="pic/mail_icon.png" alt=""> Gửi thông báo</a></li>
+	<li class="item-143 nav-item"><a href="GuiThongBao-AD.jsp"><img src="pic/mail_icon.png" alt=""> Gửi thông báo</a></li>
 	<li class="item-144 nav-item pure-menu-selected"><a href=""><img src="pic/key29.gif" alt=""> Tài khoản</a></li>
 		<ul>
 			<li><a href="#openThemTK">Thêm tài khoản</a></li>
@@ -82,20 +83,58 @@
 			<li><a href="#openDoiMK">Đổi mật khẩu</a></li>
 
 		</ul>
-	<li class="item-145 nav-item"><a href=""><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
-	<li class="item-146 nav-item"><a href=""><img src="pic/icon=30x (2).png" alt=""> Lọc luận văn</a></li>
-	<li class="item-147 nav-item"><a href=""><img src="pic/icon=30x (1).png" alt="">So sánh luận văn</a></li>
+	<li class="item-145 nav-item"><a href="TimKiem-AD.jsp"><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
+	<li class="item-146 nav-item"><a href="LocLuanVan-AD.jsp"><img src="pic/icon=30x (2).png" alt=""> Lọc luận văn</a></li>
+	<li class="item-147 nav-item"><a href="SoSanhLuanVan-AD.jsp"><img src="pic/icon=30x (1).png" alt="">So sánh luận văn</a></li>
 	</ul>
 
 </div>
-				</div>
+</div>
 				<!-- ......sườn phải.......-->
-			</div>
-		</div>
+				<div class="col-md-9">
+				<h3 align="center">Lọc luận văn</h3>
+     <h4>Nhập phần trăm cần lọc</h4>
+     <div class="row">
+       <div class="col-md-2">
+         <div class="input-group">
+      <input type="text" class="form-control" placeholder="%">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Lọc</button>
+      </span>
+    </div>
+    <p></p>
+       </div>
+     </div>
+     
+  <table class="table table-bordered">
+        <tr>
+          <th>Mã đề tài</th>
+          <th>Tên đề tài</th>
+          <th>Mã sinh viên</th>
+          <th>Tên sinh viên</th>
+        </tr>
+        <tr>
+        <td>DT001</td>
+        <td>Xây dựng web bán hàng</td>
+        <td>SV001</td>
+        <td>Nguyễn Tuấn Tú</td>
+        </tr>
+        <tr>
+        <td>DT002</td>
+        <td>Xây dựng web bán hàng</td>
+        <td>SV023</td>
+        <td>Trần Minh Huân</td>
+        </tr>
+      </table>
+      
+<p><h4>(*)Phần trăm giống nhau của các đề tài dựa theo nội dung tóm tắt của từng đề tài.</h4></p>
+				</div>
+</div>
+</div>
+</div>
 	</div>
-			</div>
-			</div>
-			<div class="panel panel-default">
+	</div>
+		<div class="panel panel-default">
   <div class="panel-footer">
   	Designed By : Nhóm 5
 		</div>
