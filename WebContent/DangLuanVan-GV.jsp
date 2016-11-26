@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Tìm kiếm</title>
+	<title>Đăng luận văn</title>
 
 	<meta http-equiv="X-UA_Compatible" content="IE=edge">
 		<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-	<link rel="stylesheet" media="screen" href="css/giaodien.css">
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<link rel="stylesheet" media="screen" href="css/giaodien-dlv.css">
 	<script src="js/bootstrap.min.js"></script>
 
 
@@ -21,7 +21,7 @@
   				<div class="container-fluid">
     
     				<div class="navbar-header">
-      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -66,98 +66,56 @@
             <li><a href="#">Đổi mật khẩu</a></li>
           </ul>
         </li>
-        <li><a href="">Tìm kiếm</a></li>
-        <li><a href="">Danh sách đề tài</a></li>
-        <li><a href="">Đăng đề tài</a></li>
+        <li><a href="TimKiem-GV.jsp">Tìm kiếm</a></li>
+        <li><a href="DSDeTai.jsp">Danh sách đề tài</a></li>
+        <li><a href="DangLuanVan-GV.jsp">Đăng luận văn</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Giáo viên </a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
 </nav>
+<h3 align="center">Đăng Luận Văn</h3>
+<div class="row">
+	<div class="col-md-3 col-md-offset-2">
+	<label> Tên luận văn <br>
+		<input type="tex" name="">
+	</label>
+	<label> Tên đề tài <br>
+		<input type="tex" name="">
+	</label>
+	<label> Tên giáo viên <br>
+		<input type="tex" name="">
+	</label>
+	<label> Tên khoa <br>
+		<input type="tex" name="">
+	</label>
+	<label> Tải file <br>
+		<input type="file" class="upload">
+	</label>
+    
 
-				<div class="row">
-			<div class="col-md-12">
-				<div class="col-xs-3" ><h3 align="center">Tìm kiếm</h3>
-  
-		<div><label>Tìm kiếm theo? <p></p><select class="form-control"></label>
-					<option>Mã đề tài</option>
-					<option>Mã giáo viên</option>
-					<option>Mã khoa</option>
-					</select>
-			</div>
-			<p></p>
-		<label>Nhập mã<p></p> <input type="text"></label>
-		<a href="#"><img src="pic/Find01-128.png" alt="Tìm" class="img-circle" width="50"></a>
 		
-		<h4>Nội dung tóm tắt &nbsp;	&nbsp; <a href="">Tải(*)</a></h4> 
-		<select multiple class="form-control">
-			<option></option>
-			
-			
-		</select>
-  
-  </div>
-  <div class="col-xs-9"><h3 align="center">Danh sách đề tài</h3>
-  		<tbody>
-  		<table class="table">
-				<tr>
-					<th>STT</th>
-					<th>Mã ĐT</th>
-					<th>Tên ĐT</th>
-					<th>GVHD</th>
-					<th>Tên khoa</th>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>DT02</td>
-					<td>Quản lý bán hàng</td>
-					<td>Nguyễn Văn A</td>
-					<td>CNTT</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>DT03</td>
-					<td>Máy bán hàng tự động</td>
-					<td>Nguyễn Văn A</td>
-					<td>Cơ khí</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>DT04</td>
-					<td>Quản lý bán hàng</td>
-					<td>Nguyễn Văn A</td>
-					<td>CNTT</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>DT05</td>
-					<td>Quản lý bán hàng</td>
-					<td>Nguyễn Văn A</td>
-					<td>CNTT</td>
-				</tr>
-			</table>
-  			
-  		</tbody>
-			
-			(*) Giáo viên chỉ tải đề tài do mình hướng dẫn
-  </div>
-    		</div>
-		</div>
 	</div>
-
-
+	<div class="col-md-3 col-md-offset-2">
+	<label>Mô tả nội dung luận văn</label>
+	<textarea name="textarea" style="width:250px;height:150px;"></textarea>
+	<a href="#"><button id="btn1">Đăng</button></a>
+	<a href="#"> <button id="btn2">Hủy</button></a>
+		
+	</div>
 </div>
+
+
+
 <div class="panel panel-default">
   <div class="panel-footer">
   	Designed By : Nhóm 5
 		</div>
-
-</div>
 </div>
 </div>
 </body>

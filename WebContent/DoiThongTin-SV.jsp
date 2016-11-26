@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -21,7 +22,7 @@
   				<div class="container-fluid">
     
     				<div class="navbar-header">
-      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -60,8 +61,8 @@
         <li class="active"><a href="ThongBao-SV.html">Thông báo <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Sinh Viên</a></li>
-        <li><a href="TrangChu.html">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -81,9 +82,9 @@
 			<li><a href="#openDoiMK">Đổi mật khẩu</a></li>
 
 		</ul>
-	<li class="item-145 nav-item"><a href=""><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
-	<li class="item-146 nav-item"><a href=""><img src="pic/download-list-icon.png" alt="">Danh sách đề tài</a></li>
-	<li class="item-147 nav-item"><a href=""><img src="pic/icon=30x.png" alt="">Tài liệu tham khảo</a></li>
+	<li class="item-145 nav-item"><a href="TimKiem-SV.jsp"><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
+	<li class="item-146 nav-item"><a href="DSDeTai-SV.jsp"><img src="pic/download-list-icon.png" alt="">Danh sách đề tài</a></li>
+	<li class="item-147 nav-item"><a href="TaiLieuThamKhao-SV.jsp"><img src="pic/icon=30x.png" alt="">Tài liệu tham khảo</a></li>
 	</ul>
 
 </div>
@@ -108,7 +109,7 @@
 						<td><label>Chuyên ngành <br> <input type="text" name=""></label></td>
 					</tr>
 					<tr>
-						<td><label>Giới tính <br> <input type="radio" name="" checked="" value=""> Nam <input type="radio" name="" checked="" value=""> Nữ</label></td>
+						<td><label>Giới tính <br> <input type="radio" name="check" checked="" value=""> Nam <input type="radio" name="check" checked="" value=""> Nữ</label></td>
 						<td> <label>Email <br><input type="text" name=""></label></td>
 
 						
@@ -132,46 +133,6 @@
   	Designed By : Nhóm 5
 		</div>
 
-		<div id="openinfor" class="modalDialog">
-   			 <div>
-        		<a href="#close" title="Close" class="close">X</a>
-        			<form>
-        				 	<table id="table1" class="table table-condensed">
-        				 	<tr>
-        				 		<th id="th1">Ảnh</th>
-        				 		<th id="th2">Thông tin</th>
-        				 	</tr>
-        				 	<tr>
-        				 		<td>
-        				 			
-        				 		</td >
-        				 		<td id="td1">
-        				 			MSSV
-									<p></p>
-									Họ và tên
-									<p></p>
-									Giới tính
-									<p></p>
-									Ngày sinh
-									<p></p>
-									Khoa
-									<p></p>
-									Chuyên ngành
-									<p></p>
-									Email
-									<p></p>
-									Địa chỉ
-
-        				 		</td>
-        				 	</tr>
-
-							</table>
-					</form>
-
-    		</div>
-		</div>
-
-				
 
 <div id="openDoiMK" class="modalDialog">
    			 <div>

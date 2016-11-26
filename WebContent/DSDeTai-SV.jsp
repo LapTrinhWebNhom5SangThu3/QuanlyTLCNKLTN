@@ -1,8 +1,14 @@
+
 <!DOCTYPE html>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Giao diện chung</title>
+	<title>Danh sách đề tài</title>
 
 	<meta http-equiv="X-UA_Compatible" content="IE=edge">
 		<!-- Latest compiled and minified CSS & JS -->
@@ -14,6 +20,12 @@
 
 </head>
 <body>
+<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://localhost/csdlweb"
+     user="root"  password="Lehaidang2411"/>
+<sql:query dataSource="${snapshot}" var="result">
+SELECT * from danhsachdetai;
+</sql:query>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -21,7 +33,7 @@
   				<div class="container-fluid">
     
     				<div class="navbar-header">
-      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      					<a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -66,63 +78,48 @@
             <li><a href="#">Đổi mật khẩu</a></li>
           </ul>
         </li>
-        <li><a href="">Tìm kiếm</a></li>
-        <li><a href="">Danh sách đề tài</a></li>
-        <li><a href="">Tài liệu tham khảo</a></li>
-
+        <li><a href="TimKiem-SV.jsp">Tìm kiếm</a></li>
+        <li><a href="#">Danh sách đề tài</a></li>
+        <li><a href="TaiLieuThamKhao-SV.jsp">Tài liệu tham khảo</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Hi!</a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
 </nav>
 
-				 <div class="row">
-  <div class="col-xs-3"  style= "background: WhiteSmoke"><h3 align="center">Tìm kiếm</h3>
-  
-		<div><label>Tìm kiếm theo? <p></p><select class="form-control"></label>
-					<option>Mã đề tài</option>
-					<option>Tên đề tài</option>
+				<div class="row">
+			<div class="col-md-8 col-md-offset-2"  ><h3 align="center">Danh sách đề tài</h3>
+			<div><label>Chọn khoa <p></p><select class="form-control"></label>
+					<option>CNTT</option>
+					<option>Điện điện tử</option>
+					<option>CN Thực phẩm</option>
 					</select>
 			</div>
 			<p></p>
-		<label>Nhập mã<p></p> <input type="text"></label>
-		<a href="#"><img src="pic/Find01-128.png" alt="Tìm" class="img-circle" width="50"></a>
-		
-  
-  </div>
-  <div class="col-xs-9"   style= "background: WhiteSmoke"><h3 align="center">Danh sách tài liệu tham khảo</h3>
-  
 			<table class="table table-bordered">
 				<tr>
-					<th>STT</th>
-					<th>Mã ĐT</th>
-					<th>Tên ĐT</th>
-					<th>Tài liệu tham khảo</th>
+				<th>STT</th>
+					<th>Mã đề tài</th>
+					<th>Tên đề tài</th>
+					<th>Mã khoa</th>
+					<th>Tên khoa</th>
 				</tr>
-				<td>1<td>
-				<tr>
-				
-				</tr>
-				<td>2<td>
-				<tr>
-				</tr>
-				<td>3<td>
-				<tr>
-				</tr>
-				<td>4<td>
-				<tr>
-				</tr>
-				<td>5<td>
-				<tr>
-				
-				</tr>
+				<c:forEach var="row" items="${result.rows}">
+						<tr>
+   								<td><c:out value="${row.STT}"/></td>
+  								<td><c:out value="${row.MaDT}"/></td>
+   								<td><c:out value="${row.TenDT}"/></td>
+   								<td><c:out value="${row.MaKhoa}"/></td>
+   								<td><c:out value="${row.TenKhoa}"/></td>
+					</tr>
+				</c:forEach>
 			</table>
-  </div>
-	
+			
+			</div>
 	</div>
 
 </div>

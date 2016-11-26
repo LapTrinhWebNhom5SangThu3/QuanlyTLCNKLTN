@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Trang chủ admin</title>
+	<title>Gửi thông báo</title>
 
 	<meta http-equiv="X-UA_Compatible" content="IE=edge">
 		<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-	<link rel="stylesheet" media="screen" href="css/TrangChu-AD.css">
+	<link rel="stylesheet" media="screen" href="css/ThongBaoAD.css">
 	<script src="js/jquery-3.1.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 
@@ -60,8 +61,8 @@
         <li class="active"><a href="#">Trang Admin <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Hi!</a></li>
-        <li><a href="#">Đăng xuất <img src="" alt="" width=""></a></li>
+      	<li><a href=""></a></li>
+        <li><a href="TrangChu.jsp">Đăng xuất <img src="" alt="" width=""></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -82,14 +83,64 @@
 			<li><a href="#openDoiMK">Đổi mật khẩu</a></li>
 
 		</ul>
-	<li class="item-145 nav-item"><a href=""><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
-	<li class="item-146 nav-item"><a href=""><img src="pic/icon=30x (2).png" alt=""> Lọc luận văn</a></li>
-	<li class="item-147 nav-item"><a href=""><img src="pic/icon=30x (1).png" alt="">So sánh luận văn</a></li>
+	<li class="item-145 nav-item"><a href="TimKiem-AD.jsp"><img src="pic/search-icon.png" alt="">Tìm kiếm</a></li>
+	<li class="item-146 nav-item"><a href="LocLuanVan-AD.jsp"><img src="pic/icon=30x (2).png" alt=""> Lọc luận văn</a></li>
+	<li class="item-147 nav-item"><a href="SoSanhLuanVan-AD.jsp"><img src="pic/icon=30x (1).png" alt="">So sánh luận văn</a></li>
 	</ul>
 
 </div>
 				</div>
 				<!-- ......sườn phải.......-->
+							<img src="pic/loa.png" width="7%" ><h3>Gửi thông báo!</h3>
+							<table>
+								<tr>
+									<td>
+										<h4>Danh sách gửi thông báo</h4>
+									</td>
+									<td>
+										&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+									</td>
+									<td>
+										<h4>Ghi thông báo</h4>
+									</td>
+									<td>
+										&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+									</td>
+									<td>
+										<h4>File đính kèm</h4>
+									</td>
+
+								</tr>
+								<tr>
+									<td>
+										<textarea name="textarea" style="width:250px;height:50px;"></textarea>
+									</td>
+									<td>
+										&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+									</td>
+									<td>
+										<textarea name="textarea" style="width:250px;height:50px;"></textarea>
+									</td>
+									<td>
+										&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+									</td>
+									<td>
+										<input type="file">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										<a href="#"><button id="btn1">Gửi</button></a>
+										<a href="#"> <button id="btn2">Hủy</button></a>
+									</td>
+								</tr>
+							</table>
 			</div>
 		</div>
 	</div>
@@ -125,15 +176,16 @@
 <div id="openThemTK" class="modalDialog">
    			 <div>
         		<a href="#close" title="Close" class="close">X</a>
-        			<form>
+        			<form  method="post" action="registration.jsp">
         				 	
-						  <h2 id="dn">Thêm Tài Khoản</h2>
-				 		<input id="input1" placeholder="Tên truy cập" type="text" required="">
-						 <input id="input2" placeholder="Mật khẩu" type="password" required="">
-						 <input id="input2" placeholder="Nhập lại" type="password" required="">
+						 <h2 id="dn">Thêm Tài Khoản</h2>
+						  <input id="input1" placeholder="Mã ID" type="text"  name="id">
+				 		<input id="input1" placeholder="Tên truy cập" type="text"  name="uname">
+						 <input id="input2" placeholder="Mật khẩu" type="password" name="pass">
+						 <input id="input1" placeholder="Level" type="text" name="level">
 						 
-						  <a href="#"><button id="btn1">Lưu</button></a>
-						  <a href="#"> <button id="btn2">Hủy</button></a>
+						  <input  id="btn1" type="submit" value="Đăng ký"  />
+                        <input id="btn2"  type="reset" value="Hủy" />
 					</form>
 
     		</div>
@@ -141,14 +193,13 @@
 <div id="openKhoaTK" class="modalDialog">
    			 <div>
         		<a href="#close" title="Close" class="close">X</a>
-        			<form>
+        			<form method="post"  action="delete.jsp">
         				 	
 						  <h2 id="dn">Vô Hiệu Hoá Tài Khoản</h2>
-				 		<input id="input1" placeholder="Mã tài khoản" type="text" required="">
-						 <input id="input2" placeholder="Mật khẩu admin" type="password" required="">
+				 		<input id="input1" placeholder="Mã tài khoản" type="text" name="idtk">
 						 
-						  <a href="#"><button id="btn1">Lưu</button></a>
-						  <a href="#"> <button id="btn2">Hủy</button></a>
+						  <a href="#"><button id="btn1" type="submit">Lưu</button></a>
+						  <a href="#"> <button id="btn2" type="reset">Hủy</button></a>
 					</form>
 
     		</div>

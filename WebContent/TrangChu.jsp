@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Trang chủ</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA_Compatible" content="IE=edge">
-		<!-- Latest compiled and minified CSS & JS -->
-		<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-		<link rel="stylesheet" media="screen" href="css/TrangChu.css">
-		<script src="js/jquery-3.1.0.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Trang Chủ</title>
+	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="css/TrangChu.css">
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-		<div class="container">
+<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 				<nav class="navbar navbar-default">
   	<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="20%"></a>
+      <a class="navbar-brand" href="#"><img src="pic/home.png" alt="" width="17%"></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -151,7 +149,7 @@
 
 				</div>
 				<div class="col-md-7">
-					<h4><img src="PIC/LOA.png" alt="" width="10%"><b>Thông báo</b></h4>
+					<h4><img src="pic/loa.png" alt="" width="10%"><b>Thông báo</b></h4>
 					<table>
 						<tr>
 							<th>Thông báo về việc nộp luận văn tốt nghiệp khóa 2014</th>
@@ -216,23 +214,16 @@
 		<div id="openModal" class="modalDialog">
    			 <div>
         		<a href="#close" title="Close" class="close">X</a>
-        			<form>
-        				 	
+        			<form method="post" action="login.jsp">
 						  <h2 id="dn">Đăng nhập</h2>
-							<div id="radio1">
-        				 		Sinh viên <input type="radio" name="checkbox" value="" />
-								&nbsp;&nbsp;Giáo viên <input type="radio" name="checkbox" value="" />
-								&nbsp;&nbsp;Admin <input type="radio" name="checkbox" value="" />
-        				 	</div>
-						<label><h5>Tên truy cập</h5> <input id="input1" placeholder="Username" type="text" required=""></label>
+						<label><h5>Tên truy cập</h5> <input id="input1" placeholder="Username" type="text" required="" name="uname"></label>
 							<br>
-						<label><h5>Mật khẩu<h5> <input id="input2" placeholder="Password" type="password" required=""></label>
+						<label><h5>Mật khẩu<h5> <input id="input2" placeholder="Password" type="password" required="" name="pass"></label>
 						 
-						  <button id="btn1">Đăng  nhập</button>
+						  <button id="btn1" value="Login">Đăng  nhập</button>
 					</form>
 
     		</div>
 		</div>
-
 </body>
 </html>
